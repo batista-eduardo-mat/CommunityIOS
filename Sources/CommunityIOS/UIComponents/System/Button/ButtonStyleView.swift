@@ -19,7 +19,7 @@ struct ButtonStyleView: View {
             .buttonStyle(BorderedButtonStyle())
             
             Button("Bordered Prominent") {}
-                .buttonStyle(.borderedProminent)
+                .buttonStyle(BorderedProminentButtonStyle())
             
             Button("Plain") {}
                 .buttonStyle(PlainButtonStyle())

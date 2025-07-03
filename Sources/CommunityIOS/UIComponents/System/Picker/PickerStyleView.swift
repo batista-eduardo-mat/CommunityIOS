@@ -9,17 +9,17 @@ import SwiftUI
 
 struct PickerStyleView: View {
     
-    @State private var options: [String] = []
+    @State private var options: Int = 0
     
     var body: some View {
-        VStack {
+        ScrollView {
             
             Picker("Automatic", selection: $options) {
                 Text("Option A").tag(0)
                 Text("Option B").tag(1)
                 Text("Option C").tag(2)
             }
-            .pickerStyle(.automatic)
+            .pickerStyle(DefaultPickerStyle())
             
 #if os(iOS)
             Picker("Wheel", selection: $options) {
@@ -27,7 +27,7 @@ struct PickerStyleView: View {
                 Text("Option B").tag(1)
                 Text("Option C").tag(2)
             }
-            .pickerStyle(.wheel)
+            .pickerStyle(WheelPickerStyle())
 #endif
             
             Picker("Segmented", selection: $options) {
@@ -35,29 +35,30 @@ struct PickerStyleView: View {
                 Text("Option B").tag(1)
                 Text("Option C").tag(2)
             }
-            .pickerStyle(.segmented)
+            .pickerStyle(SegmentedPickerStyle())
             
             Picker("Menu", selection: $options) {
-                Text("Option A").tag("Option A")
-                Text("Option B").tag("Option B")
-                Text("Option C").tag("Option C")
+                Text("Option A").tag(0)
+                Text("Option B").tag(1)
+                Text("Option C").tag(2)
             }
-            .pickerStyle(.menu)
+            .pickerStyle(MenuPickerStyle())
             
 #if os(macOS)
             Picker("Radio Group", selection: $options) {
-                Text("Option A").tag("Option A")
-                Text("Option B").tag("Option B")
-                Text("Option C").tag("Option C")
+                Text("Option A").tag(0)
+                Text("Option B").tag(1)
+                Text("Option C").tag(2)
             }
-            .pickerStyle(.radioGroup)
+            .pickerStyle(RadioGroupPickerStyle())
 #endif
             
             Picker("In line", selection: $options) {
-                Text("A").tag(0)
-                Text("B").tag(1)
+                Text("Option A").tag(0)
+                Text("Option B").tag(1)
+                Text("Option C").tag(2)
             }
-            .pickerStyle(.inline)
+            .pickerStyle(InlinePickerStyle())
             
         }
         .padding()
