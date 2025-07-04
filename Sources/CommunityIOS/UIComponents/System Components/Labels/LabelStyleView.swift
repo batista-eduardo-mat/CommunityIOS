@@ -11,13 +11,13 @@ struct LabelStyleView: View {
     var body: some View {
         VStack(spacing: 30) {
             
-            Label("Title Only", systemImage: "circle")
+            Label("Title Only", systemImage: "star.fill")
                 .labelStyle(TitleOnlyLabelStyle())
             
-            Label("Icon Only", systemImage: "circle")
+            Label("Icon Only", systemImage: "star.fill")
                 .labelStyle(IconOnlyLabelStyle())
             
-            Label("Title and Icon", systemImage: "circle")
+            Label("Title and Icon", systemImage: "star.fill")
                 .labelStyle(TitleAndIconLabelStyle())
             
         }
