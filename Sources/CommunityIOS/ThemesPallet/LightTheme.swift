@@ -7,7 +7,7 @@
 
 
 public struct LightTheme {
-    static let palette: PalletStruct = PalletBuilder()
+    static let palette: PaletteStruct = PaletteBuilder()
     
         // MARK: TEXT COLOR
         .setTextPrimary(#colorLiteral(red: 0.10, green: 0.10, blue: 0.12, alpha: 1.0))

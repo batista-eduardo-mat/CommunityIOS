@@ -8,18 +8,18 @@
 
 import SwiftUI
 
-struct TemplateButtonStyle: ButtonStyle {
+public struct TemplateButtonStyle: ButtonStyle {
     let color: Color
     let cornerRadius: CGFloat
     let lineWidth: CGFloat
     
-    init(color: Color = .clear, cornerRadius: CGFloat = 8.0, lineWidth: CGFloat = 1.0) {
+    public init(color: Color = .clear, cornerRadius: CGFloat = 8.0, lineWidth: CGFloat = 1.0) {
         self.color = color
         self.cornerRadius = cornerRadius
         self.lineWidth = lineWidth
     }
     
-    func makeBody(configuration: Configuration) -> some View {
+    public func makeBody(configuration: Configuration) -> some View {
         configuration
             .label
             .overlay(
@@ -31,9 +31,9 @@ struct TemplateButtonStyle: ButtonStyle {
 }
 
 extension ButtonStyle where Self == TemplateButtonStyle {
-    static var templateButtonStyle: TemplateButtonStyle { .init() }
+    public static var templateButtonStyle: TemplateButtonStyle { TemplateButtonStyle() }
     
-    static func templateButtonStype(color: Color = .clear, cornerRadius: CGFloat = 8.0, lineWidth: CGFloat = 1.0) -> TemplateButtonStyle {
+    public static func templateButtonStype(color: Color = .clear, cornerRadius: CGFloat = 8.0, lineWidth: CGFloat = 1.0) -> TemplateButtonStyle {
         return .init(color: color, cornerRadius: cornerRadius, lineWidth: lineWidth)
     }
 }

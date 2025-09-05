@@ -1,5 +1,5 @@
 //
-//  PalletStruct.swift
+//  PaletteStruct.swift
 //  CommunityIOS
 //
 //  Created by Eduardo Batista on 03/09/25.
@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-struct PalletStruct {
+public struct PaletteStruct: Sendable {
     //MARK: TEXT UIColor
     var textPrimary: UIColor
     var textSecondary: UIColor
@@ -55,5 +55,5 @@ struct PalletStruct {
     var bgGradientLight: UIColor
     var bgGradientDark: UIColor
     
-    static let defatulPallet: PalletStruct = PalletStruct(textPrimary: .clear, textSecondary: .clear, textSuccess: .clear, textDanger: .clear, textWarning: .clear, textInfo: .clear, textLight: .clear, textDark: .clear, textBody: .clear, textMuted: .clear, textWhite: .clear, textBlack50: .clear, textWhite50: .clear, primaryLink: .clear, secondaryLink: .clear, successLink: .clear, dangerLink: .clear, warningLink: .clear, infoLink: .clear, lightLink: .clear, darkLink: .clear, mutedLink: .clear, whiteLink: .clear, bgPrimary: .clear, bgSecondary: .clear, bgSuccess: .clear, bgDanger: .clear, bgWarning: .clear, bgInfo: .clear, bgLight: .clear, bgDark: .clear, bgWhite: .clear, bgTransparent: .clear, bgGradientPrimary: .clear, bgGradientSecondary: .clear, bgGradientSuccess: .clear, bgGradientDanger: .clear, bgGradientWarning: .clear, bgGradientInfo: .clear, bgGradientLight: .clear, bgGradientDark: .clear)
+    static let defatulPallet: PaletteStruct = PaletteStruct(textPrimary: .clear, textSecondary: .clear, textSuccess: .clear, textDanger: .clear, textWarning: .clear, textInfo: .clear, textLight: .clear, textDark: .clear, textBody: .clear, textMuted: .clear, textWhite: .clear, textBlack50: .clear, textWhite50: .clear, primaryLink: .clear, secondaryLink: .clear, successLink: .clear, dangerLink: .clear, warningLink: .clear, infoLink: .clear, lightLink: .clear, darkLink: .clear, mutedLink: .clear, whiteLink: .clear, bgPrimary: .clear, bgSecondary: .clear, bgSuccess: .clear, bgDanger: .clear, bgWarning: .clear, bgInfo: .clear, bgLight: .clear, bgDark: .clear, bgWhite: .clear, bgTransparent: .clear, bgGradientPrimary: .clear, bgGradientSecondary: .clear, bgGradientSuccess: .clear, bgGradientDanger: .clear, bgGradientWarning: .clear, bgGradientInfo: .clear, bgGradientLight: .clear, bgGradientDark: .clear)
 }

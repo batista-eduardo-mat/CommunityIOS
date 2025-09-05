@@ -10,7 +10,7 @@ import SwiftUI
 
 public struct Clear {
     
-    static let palette: PalletStruct = PalletBuilder()
+    static let palette: PaletteStruct = PaletteBuilder()
     //MARK: TEXT COLOR
         .setTextPrimary(.clear)
         .setTextSecondary(.clear)

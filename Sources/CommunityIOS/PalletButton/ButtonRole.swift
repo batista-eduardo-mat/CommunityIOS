@@ -6,6 +6,6 @@
 //
 
 
-enum PalletButtonRole {
+public enum ButtonRole {
     case primary, secondary, success, danger
 }
