@@ -5,12 +5,10 @@
 //  Created by Eduardo Batista on 03/09/25.
 //
 
-
 import SwiftUI
 
-public struct Clear {
-    
-    static let palette: PaletteStruct = PaletteBuilder()
+public extension Themes.Palette {
+    static let clear : PaletteStruct = PaletteBuilder()
     //MARK: TEXT COLOR
         .setTextPrimary(.clear)
         .setTextSecondary(.clear)

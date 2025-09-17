@@ -5,10 +5,8 @@
 //  Created by Eduardo Batista on 03/09/25.
 //
 
-
-public struct LightTheme {
-    static let palette: PaletteStruct = PaletteBuilder()
-    
+public extension Themes.Palette {
+    static let light: PaletteStruct = PaletteBuilder()
         // MARK: TEXT COLOR
         .setTextPrimary(#colorLiteral(red: 0.10, green: 0.10, blue: 0.12, alpha: 1.0))
         .setTextSecondary(#colorLiteral(red: 0.40, green: 0.43, blue: 0.47, alpha: 1.0))
@@ -23,7 +21,6 @@ public struct LightTheme {
         .setTextWhite(#colorLiteral(red: 1.00, green: 1.00, blue: 1.00, alpha: 1.0))
         .setTextBlack50(#colorLiteral(red: 0.00, green: 0.00, blue: 0.00, alpha: 0.5))
         .setTextWhite50(#colorLiteral(red: 1.00, green: 1.00, blue: 1.00, alpha: 0.5))
-
         // MARK: LINK COLOR
         .setPrimaryLink(#colorLiteral(red: 0.00, green: 0.48, blue: 1.00, alpha: 1.0))
         .setSecondaryLink(#colorLiteral(red: 0.28, green: 0.53, blue: 0.96, alpha: 1.0))
@@ -35,7 +32,6 @@ public struct LightTheme {
         .setDarkLink(#colorLiteral(red: 0.12, green: 0.13, blue: 0.15, alpha: 1.0))
         .setMutedLink(#colorLiteral(red: 0.55, green: 0.58, blue: 0.62, alpha: 1.0))
         .setWhiteLink(#colorLiteral(red: 1.00, green: 1.00, blue: 1.00, alpha: 1.0))
-
         // MARK: BACKGROUND COLOR
         .setBgPrimary(#colorLiteral(red: 0.00, green: 0.47, blue: 0.90, alpha: 1.0))
         .setBgSecondary(#colorLiteral(red: 0.92, green: 0.94, blue: 0.96, alpha: 1.0))
@@ -47,7 +43,6 @@ public struct LightTheme {
         .setBgDark(#colorLiteral(red: 0.12, green: 0.13, blue: 0.15, alpha: 1.0))
         .setBgWhite(#colorLiteral(red: 1.00, green: 1.00, blue: 1.00, alpha: 1.0))
         .setBgTransparent(#colorLiteral(red: 0.00, green: 0.00, blue: 0.00, alpha: 0.0))
-
         // MARK: BACKGROUND GRADIENT
         .setBgGradientPrimary(#colorLiteral(red: 0.00, green: 0.47, blue: 0.90, alpha: 1.0))
         .setBgGradientSecondary(#colorLiteral(red: 0.92, green: 0.94, blue: 0.96, alpha: 1.0))

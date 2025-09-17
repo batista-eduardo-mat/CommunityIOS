@@ -1,5 +1,5 @@
 //
-//  PalletButtonStyle.swift
+//  PaletteButtonStyle.swift
 //  CommunityIOS
 //
 //  Created by Eduardo Batista on 03/09/25.
@@ -9,12 +9,11 @@
 import SwiftUI
 
 public struct PaletteButtonStyle: ButtonStyle {
-    let palette: PaletteStruct
+    @EnvironmentObject private var theme: ThemeManager
     let role: ButtonRole
-    let style: ButtonStyleConfig
+    let style: ButtonSettings
 
-    public init(palette: PaletteStruct = PaletteBuilder().build() , role: ButtonRole = .primary, style: ButtonStyleConfig = ButtonStyleConfig()) {
-        self.palette = palette
+    public init(role: ButtonRole = .primary, style: ButtonSettings = ButtonSettings()) {
         self.role = role
         self.style = style
     }
@@ -25,7 +24,7 @@ public struct PaletteButtonStyle: ButtonStyle {
             .foregroundColor(Color(textColor))
             .background(
                 RoundedRectangle(cornerRadius: style.cornerRadius)
-                    .strokeBorder(Color(palette.bgDark), lineWidth: style.lineWidth)
+                    .strokeBorder(Color(theme.palette.bgDark), lineWidth: style.lineWidth)
                     .background(
                         RoundedRectangle(cornerRadius: style.cornerRadius)
                             .fill(Color(bgColor))
@@ -39,19 +38,19 @@ public struct PaletteButtonStyle: ButtonStyle {
     
     private var textColor: UIColor {
         switch role {
-        case .primary: return palette.textWhite
-        case .secondary: return palette.textDark
-        case .success: return palette.textSuccess
-        case .danger: return palette.textDanger
+        case .primary: return theme.palette.textWhite
+        case .secondary: return theme.palette.textDark
+        case .success: return theme.palette.textSuccess
+        case .danger: return theme.palette.textDanger
         }
     }
     
     private var bgColor: UIColor {
         switch role {
-        case .primary: return palette.bgPrimary
-        case .secondary: return palette.bgSecondary
-        case .success: return palette.bgSuccess
-        case .danger: return palette.bgDanger
+        case .primary: return theme.palette.bgPrimary
+        case .secondary: return theme.palette.bgSecondary
+        case .success: return theme.palette.bgSuccess
+        case .danger: return theme.palette.bgDanger
         }
     }
 }
@@ -60,7 +59,7 @@ extension ButtonStyle where Self == PaletteButtonStyle {
     
     public static var paletteButtonStyle: PaletteButtonStyle { PaletteButtonStyle() }
     
-    public static func paletteButtonStyle(palette: PaletteStruct = PaletteBuilder().build() , role: ButtonRole = .primary, style: ButtonStyleConfig = ButtonStyleConfig()) -> PaletteButtonStyle {
-        return .init(palette: palette, role: role, style: style)
+    public static func paletteButtonStyle(role: ButtonRole = .primary, style: ButtonSettings = ButtonSettings()) -> PaletteButtonStyle {
+        return .init(role: role, style: style)
     }
 }

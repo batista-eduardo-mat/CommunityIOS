@@ -1,5 +1,5 @@
 //
-//  PalletButtonConfig.swift
+//  ButtonSettings.swift
 //  CommunityIOS
 //
 //  Created by Eduardo Batista on 03/09/25.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-public struct ButtonStyleConfig {
+public struct ButtonSettings {
     
     let cornerRadius: CGFloat
     let lineWidth: CGFloat

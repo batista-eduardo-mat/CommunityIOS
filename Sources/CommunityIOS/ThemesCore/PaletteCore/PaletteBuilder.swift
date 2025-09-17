@@ -5,7 +5,6 @@
 //  Created by Eduardo Batista on 03/09/25.
 //
 
-
 import SwiftUI
 
 public class PaletteBuilder {
@@ -18,7 +17,7 @@ public class PaletteBuilder {
         return defaultPallete
     }
     
-    //MARK: SET TEXT UIColor
+    //MARK: SET TEXT UICOLOR
     func  setTextPrimary(_ textPrimary: UIColor) -> PaletteBuilder {
         defaultPallete.textPrimary = textPrimary
         return self
@@ -72,7 +71,7 @@ public class PaletteBuilder {
         return self
     }
     
-    //MARK: SET LINK UIColor
+    //MARK: SET LINK UICOLOR
     func setPrimaryLink(_ primaryLink: UIColor) -> PaletteBuilder {
         defaultPallete.primaryLink = primaryLink
         return self
@@ -114,7 +113,7 @@ public class PaletteBuilder {
         return self
     }
     
-    //MARK: SET BACKGROUND UIColor
+    //MARK: SET BACKGROUND UICOLOR
     func setBgPrimary(_ bgPrimary: UIColor) -> PaletteBuilder {
         defaultPallete.bgPrimary = bgPrimary
         return self
@@ -156,7 +155,7 @@ public class PaletteBuilder {
         return self
     }
     
-    //MARK: SET PaletteBuilderBACKGROUND GRADIENT UIColor
+    //MARK: BACKGROUND GRADIENT UICOLOR
     func setBgGradientPrimary(_ bgGradientPrimary: UIColor) -> PaletteBuilder {
         defaultPallete.bgGradientPrimary = bgGradientPrimary
         return self

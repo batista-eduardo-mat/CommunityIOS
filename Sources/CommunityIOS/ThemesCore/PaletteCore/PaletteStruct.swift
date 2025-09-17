@@ -5,11 +5,10 @@
 //  Created by Eduardo Batista on 03/09/25.
 //
 
-
 import SwiftUI
 
 public struct PaletteStruct: Sendable {
-    //MARK: TEXT UIColor
+    //MARK: TEXT UICOLOR
     var textPrimary: UIColor
     var textSecondary: UIColor
     var textSuccess: UIColor
@@ -23,7 +22,7 @@ public struct PaletteStruct: Sendable {
     var textWhite: UIColor
     var textBlack50: UIColor
     var textWhite50: UIColor
-    //MARK: LINK UIColor
+    //MARK: LINK UICOLOR
     var primaryLink: UIColor
     var secondaryLink: UIColor
     var successLink: UIColor
@@ -34,7 +33,7 @@ public struct PaletteStruct: Sendable {
     var darkLink: UIColor
     var mutedLink: UIColor
     var whiteLink: UIColor
-    //MARK: BACKGROUND UIColor
+    //MARK: BACKGROUND UICOLOR
     var bgPrimary: UIColor
     var bgSecondary: UIColor
     var bgSuccess: UIColor
@@ -45,7 +44,7 @@ public struct PaletteStruct: Sendable {
     var bgDark: UIColor
     var bgWhite: UIColor
     var bgTransparent: UIColor
-    //MARK: BACKGROUND GRADIENT UIColor
+    //MARK: BACKGROUND GRADIENT UICOLOR
     var bgGradientPrimary: UIColor
     var bgGradientSecondary: UIColor
     var bgGradientSuccess: UIColor
