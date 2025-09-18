@@ -1,12 +1,13 @@
 //
-//  LightTheme.swift
+//  Default.swift
 //  CommunityIOS
 //
-//  Created by Eduardo Batista on 03/09/25.
+//  Created by Eduardo Batista on 18/09/25.
 //
 
+
 public extension Themes.Palette {
-    static let Light: PaletteStruct = PaletteBuilder()
+    static let Default: PaletteStruct = PaletteBuilder()
         // MARK: TEXT COLOR
         .setTextPrimary(#colorLiteral(red: 0.10, green: 0.10, blue: 0.12, alpha: 1.0))
         .setTextSecondary(#colorLiteral(red: 0.40, green: 0.43, blue: 0.47, alpha: 1.0))

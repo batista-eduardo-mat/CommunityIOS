@@ -9,6 +9,7 @@
 import SwiftUI
 
 public final class ThemeManager: ObservableObject {
+    
     @Published public var palette: PaletteStruct
     @Published public var fonts: ThemeFontProviding
 
@@ -22,3 +23,4 @@ public final class ThemeManager: ObservableObject {
         self.fonts = fonts
     }
 }
+

@@ -8,7 +8,7 @@
 import SwiftUI
 
 public extension Themes.Palette {
-    static let clear : PaletteStruct = PaletteBuilder()
+    static let Clear : PaletteStruct = PaletteBuilder()
     //MARK: TEXT COLOR
         .setTextPrimary(.clear)
         .setTextSecondary(.clear)

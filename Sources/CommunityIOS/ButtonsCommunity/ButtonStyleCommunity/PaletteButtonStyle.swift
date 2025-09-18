@@ -9,11 +9,12 @@
 import SwiftUI
 
 public struct PaletteButtonStyle: ButtonStyle {
-    @EnvironmentObject private var theme: ThemeManager
+    let theme: ThemeManager
     let role: ButtonRole
     let style: ButtonSettings
 
-    public init(role: ButtonRole = .primary, style: ButtonSettings = ButtonSettings()) {
+    public init(theme: ThemeManager = .Default , role: ButtonRole = .primary, style: ButtonSettings = ButtonSettings()) {
+        self.theme = theme
         self.role = role
         self.style = style
     }
@@ -59,7 +60,7 @@ extension ButtonStyle where Self == PaletteButtonStyle {
     
     public static var paletteButtonStyle: PaletteButtonStyle { PaletteButtonStyle() }
     
-    public static func paletteButtonStyle(role: ButtonRole = .primary, style: ButtonSettings = ButtonSettings()) -> PaletteButtonStyle {
-        return .init(role: role, style: style)
+    public static func paletteButtonStyle(theme: ThemeManager = .Default , role: ButtonRole = .primary, style: ButtonSettings = ButtonSettings()) -> PaletteButtonStyle {
+        return .init(theme: theme, role: role, style: style)
     }
 }

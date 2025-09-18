@@ -8,7 +8,7 @@
 import SwiftUI
 
 public struct ButtonSettings {
-    
+
     let cornerRadius: CGFloat
     let lineWidth: CGFloat
     let font: Font

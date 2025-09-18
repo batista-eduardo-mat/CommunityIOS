@@ -14,7 +14,7 @@ struct ProgressViewStyleView: View {
             ProgressView()
                 .progressViewStyle(DefaultProgressViewStyle())
             
-            ProgressView(value: 0.5)
+            ProgressView(value: 0.6)
                 .progressViewStyle(LinearProgressViewStyle())
                 .accentColor(.blue)
             
