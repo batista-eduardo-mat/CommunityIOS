@@ -13,7 +13,7 @@ public struct PaletteButtonStyle: ButtonStyle {
     let role: ButtonRole
     let style: ButtonSettings
 
-    public init(theme: ThemeManager = .Default , role: ButtonRole = .primary, style: ButtonSettings = ButtonSettings()) {
+    public init(theme: ThemeManager = Theme.defaultValue , role: ButtonRole = .primary, style: ButtonSettings = ButtonSettings()) {
         self.theme = theme
         self.role = role
         self.style = style
@@ -60,7 +60,7 @@ extension ButtonStyle where Self == PaletteButtonStyle {
     
     public static var paletteButtonStyle: PaletteButtonStyle { PaletteButtonStyle() }
     
-    public static func paletteButtonStyle(theme: ThemeManager = .Default , role: ButtonRole = .primary, style: ButtonSettings = ButtonSettings()) -> PaletteButtonStyle {
+    public static func paletteButtonStyle(theme: ThemeManager = Theme.defaultValue , role: ButtonRole = .primary, style: ButtonSettings = ButtonSettings()) -> PaletteButtonStyle {
         return .init(theme: theme, role: role, style: style)
     }
 }

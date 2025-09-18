@@ -4,11 +4,10 @@
 //
 //  Created by Eduardo Batista on 03/09/25.
 //
-
 import SwiftUI
 
-public extension Themes.Palette {
-    static let Clear : PaletteStruct = PaletteBuilder()
+public extension Theme.Palette {
+    static let clear : PaletteStruct = PaletteBuilder()
     //MARK: TEXT COLOR
         .setTextPrimary(.clear)
         .setTextSecondary(.clear)

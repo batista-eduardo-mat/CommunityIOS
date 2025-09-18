@@ -7,28 +7,28 @@
 
 import Foundation
 
-public extension Themes {
-    static var Default: ThemeManager {
+public extension Theme {
+    static var defaultValue: ThemeManager {
         ThemeManager(
-            palette: Themes.Palette.Default,
+            palette: Theme.Palette.defaultValue,
             fonts: DefaultFonts()
         )
     }
 }
 
-public extension Themes {
-    static var Clear: ThemeManager {
+public extension Theme {
+    static var clear: ThemeManager {
         ThemeManager(
-            palette: Themes.Palette.Clear,
+            palette: Theme.Palette.clear,
             fonts: DefaultFonts()
         )
     }
 }
 
-public extension Themes {
-    static var Light: ThemeManager {
+public extension Theme {
+    static var light: ThemeManager {
         ThemeManager(
-            palette: Themes.Palette.Default,
+            palette: Theme.Palette.light,
             fonts: DefaultFonts()
         )
     }

@@ -4,9 +4,10 @@
 //
 //  Created by Eduardo Batista on 03/09/25.
 //
+import SwiftUI
 
-public extension Themes.Palette {
-    static let Light: PaletteStruct = PaletteBuilder()
+public extension Theme.Palette {
+    static let light: PaletteStruct = PaletteBuilder()
         // MARK: TEXT COLOR
         .setTextPrimary(#colorLiteral(red: 0.10, green: 0.10, blue: 0.12, alpha: 1.0))
         .setTextSecondary(#colorLiteral(red: 0.40, green: 0.43, blue: 0.47, alpha: 1.0))

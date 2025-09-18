@@ -10,7 +10,7 @@ import SwiftUI
 @MainActor
 private struct ThemeKey: @preconcurrency EnvironmentKey {
     static let defaultValue: ThemeManager = ThemeManager(
-        palette: Themes.Palette.Default,
+        palette: Theme.Palette.defaultValue,
         fonts: DefaultFonts()
     )
 }
