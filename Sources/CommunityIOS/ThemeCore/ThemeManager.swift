@@ -11,14 +11,14 @@ import SwiftUI
 public final class ThemeManager: ObservableObject {
     
     @Published public var palette: PaletteStruct
-    @Published public var fonts: ThemeFontProviding
+    @Published public var fonts: FontStruct
 
-    public init(palette: PaletteStruct, fonts: ThemeFontProviding) {
+    public init(palette: PaletteStruct, fonts: FontStruct) {
         self.palette = palette
         self.fonts = fonts
     }
 
-    public func setTheme(palette: PaletteStruct, fonts: ThemeFontProviding) {
+    public func setTheme(palette: PaletteStruct, fonts: FontStruct) {
         self.palette = palette
         self.fonts = fonts
     }

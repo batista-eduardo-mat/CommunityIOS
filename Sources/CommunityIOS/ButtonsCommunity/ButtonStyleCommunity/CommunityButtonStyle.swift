@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-public struct PaletteButtonStyle: ButtonStyle {
+public struct CommunityButtonStyle: ButtonStyle {
     let theme: ThemeManager
     let role: ButtonRole
     let style: ButtonSettings
@@ -43,6 +43,9 @@ public struct PaletteButtonStyle: ButtonStyle {
         case .secondary: return theme.palette.textDark
         case .success: return theme.palette.textSuccess
         case .danger: return theme.palette.textDanger
+        @unknown default:
+            assertionFailure("Unhandled case encountered")
+            return .clear
         }
     }
     
@@ -52,15 +55,18 @@ public struct PaletteButtonStyle: ButtonStyle {
         case .secondary: return theme.palette.bgSecondary
         case .success: return theme.palette.bgSuccess
         case .danger: return theme.palette.bgDanger
+        @unknown default:
+            assertionFailure("Unhandled case encountered")
+            return .clear
         }
     }
 }
 
-extension ButtonStyle where Self == PaletteButtonStyle {
+extension ButtonStyle where Self == CommunityButtonStyle {
     
-    public static var paletteButtonStyle: PaletteButtonStyle { PaletteButtonStyle() }
+    public static var paletteButtonStyle: CommunityButtonStyle { CommunityButtonStyle() }
     
-    public static func paletteButtonStyle(theme: ThemeManager = Theme.defaultValue , role: ButtonRole = .primary, style: ButtonSettings = ButtonSettings()) -> PaletteButtonStyle {
+    public static func paletteButtonStyle(theme: ThemeManager = Theme.defaultValue , role: ButtonRole = .primary, style: ButtonSettings = ButtonSettings()) -> CommunityButtonStyle {
         return .init(theme: theme, role: role, style: style)
     }
 }

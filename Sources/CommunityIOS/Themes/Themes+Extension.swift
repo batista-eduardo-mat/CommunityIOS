@@ -11,7 +11,7 @@ extension Theme {
     public static var defaultValue: ThemeManager {
         ThemeManager(
             palette: Theme.Palette.defaultValue,
-            fonts: DefaultFonts()
+            fonts: Theme.Font.defaultValue
         )
     }
 }
@@ -20,7 +20,7 @@ extension Theme {
     public static var clear: ThemeManager {
         ThemeManager(
             palette: Theme.Palette.clear,
-            fonts: DefaultFonts()
+            fonts: Theme.Font.defaultValue
         )
     }
 }
@@ -29,7 +29,7 @@ extension Theme {
     public static var light: ThemeManager {
         ThemeManager(
             palette: Theme.Palette.light,
-            fonts: DefaultFonts()
+            fonts: Theme.Font.defaultValue
         )
     }
 }
