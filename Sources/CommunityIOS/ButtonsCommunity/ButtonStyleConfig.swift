@@ -7,16 +7,16 @@
 
 import SwiftUI
 
-public struct ButtonSettings {
+public struct ButtonSettings : Sendable {
 
     let cornerRadius: CGFloat
     let lineWidth: CGFloat
-    let font: Font
     
-    public init(cornerRadius: CGFloat = 16, lineWidth: CGFloat = 12, font: Font = .body) {
+    public init(cornerRadius: CGFloat = 0.0, lineWidth: CGFloat = 0.0) {
         self.cornerRadius = cornerRadius
         self.lineWidth = lineWidth
-        self.font = font
     }
+    
+    public static let `default` = ButtonSettings()
     
 }

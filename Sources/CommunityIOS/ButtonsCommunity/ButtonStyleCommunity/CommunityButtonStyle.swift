@@ -11,12 +11,12 @@ import SwiftUI
 public struct CommunityButtonStyle: ButtonStyle {
     let theme: ThemeManager
     let role: ButtonRole
-    let style: ButtonSettings
+    let settings: ButtonSettings
 
-    public init(theme: ThemeManager = Theme.defaultValue , role: ButtonRole = .primary, style: ButtonSettings = ButtonSettings()) {
+    public init(theme: ThemeManager = Theme.defaultValue , role: ButtonRole = .primary, settings: ButtonSettings = .default) {
         self.theme = theme
         self.role = role
-        self.style = style
+        self.settings = settings
     }
     
     public func makeBody(configuration: Configuration) -> some View {
@@ -24,10 +24,10 @@ public struct CommunityButtonStyle: ButtonStyle {
             .padding()
             .foregroundColor(Color(textColor))
             .background(
-                RoundedRectangle(cornerRadius: style.cornerRadius)
-                    .strokeBorder(Color(theme.palette.bgDark), lineWidth: style.lineWidth)
+                RoundedRectangle(cornerRadius: settings.cornerRadius)
+                    .strokeBorder(Color(theme.palette.bgDark), lineWidth: settings.lineWidth)
                     .background(
-                        RoundedRectangle(cornerRadius: style.cornerRadius)
+                        RoundedRectangle(cornerRadius: settings.cornerRadius)
                             .fill(Color(bgColor))
                     )
             )
@@ -66,7 +66,7 @@ extension ButtonStyle where Self == CommunityButtonStyle {
     
     public static var paletteButtonStyle: CommunityButtonStyle { CommunityButtonStyle() }
     
-    public static func paletteButtonStyle(theme: ThemeManager = Theme.defaultValue , role: ButtonRole = .primary, style: ButtonSettings = ButtonSettings()) -> CommunityButtonStyle {
-        return .init(theme: theme, role: role, style: style)
+    public static func paletteButtonStyle(theme: ThemeManager = Theme.defaultValue , role: ButtonRole = .primary, settings: ButtonSettings = .default) -> CommunityButtonStyle {
+        return .init(theme: theme, role: role, settings: settings)
     }
 }
