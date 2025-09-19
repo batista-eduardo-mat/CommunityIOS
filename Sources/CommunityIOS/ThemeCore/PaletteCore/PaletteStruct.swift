@@ -53,6 +53,4 @@ public struct PaletteStruct: Sendable {
     var bgGradientInfo: UIColor
     var bgGradientLight: UIColor
     var bgGradientDark: UIColor
-    
-    static let defatulPallet: PaletteStruct = PaletteStruct(textPrimary: .clear, textSecondary: .clear, textSuccess: .clear, textDanger: .clear, textWarning: .clear, textInfo: .clear, textLight: .clear, textDark: .clear, textBody: .clear, textMuted: .clear, textWhite: .clear, textBlack50: .clear, textWhite50: .clear, primaryLink: .clear, secondaryLink: .clear, successLink: .clear, dangerLink: .clear, warningLink: .clear, infoLink: .clear, lightLink: .clear, darkLink: .clear, mutedLink: .clear, whiteLink: .clear, bgPrimary: .clear, bgSecondary: .clear, bgSuccess: .clear, bgDanger: .clear, bgWarning: .clear, bgInfo: .clear, bgLight: .clear, bgDark: .clear, bgWhite: .clear, bgTransparent: .clear, bgGradientPrimary: .clear, bgGradientSecondary: .clear, bgGradientSuccess: .clear, bgGradientDanger: .clear, bgGradientWarning: .clear, bgGradientInfo: .clear, bgGradientLight: .clear, bgGradientDark: .clear)
 }

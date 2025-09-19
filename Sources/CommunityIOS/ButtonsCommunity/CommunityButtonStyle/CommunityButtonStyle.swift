@@ -1,5 +1,5 @@
 //
-//  PaletteButtonStyle.swift
+//  CommunityButtonStyle.swift
 //  CommunityIOS
 //
 //  Created by Eduardo Batista on 03/09/25.
@@ -13,7 +13,7 @@ public struct CommunityButtonStyle: ButtonStyle {
     let role: ButtonRole
     let settings: ButtonSettings
 
-    public init(theme: ThemeManager = Theme.defaultValue , role: ButtonRole = .primary, settings: ButtonSettings = .default) {
+    public init(theme: ThemeManager = Theme.community , role: ButtonRole = .primary, settings: ButtonSettings = .community) {
         self.theme = theme
         self.role = role
         self.settings = settings
@@ -21,11 +21,13 @@ public struct CommunityButtonStyle: ButtonStyle {
     
     public func makeBody(configuration: Configuration) -> some View {
         configuration.label
+            .frame(minWidth: settings.minWidth, minHeight: settings.minHeight)
+            .font(theme.font.font(.regular, size: 14))
             .padding()
             .foregroundColor(Color(textColor))
             .background(
                 RoundedRectangle(cornerRadius: settings.cornerRadius)
-                    .strokeBorder(Color(theme.palette.bgDark), lineWidth: settings.lineWidth)
+                    .strokeBorder(Color(bgColor), lineWidth: settings.lineWidth)
                     .background(
                         RoundedRectangle(cornerRadius: settings.cornerRadius)
                             .fill(Color(bgColor))
@@ -39,12 +41,12 @@ public struct CommunityButtonStyle: ButtonStyle {
     
     private var textColor: UIColor {
         switch role {
-        case .primary: return theme.palette.textWhite
-        case .secondary: return theme.palette.textDark
-        case .success: return theme.palette.textSuccess
-        case .danger: return theme.palette.textDanger
+        case .primary:      return theme.palette.textPrimary
+        case .secondary:    return theme.palette.textSecondary
+        case .success:      return theme.palette.textSuccess
+        case .danger:       return theme.palette.textDanger
         @unknown default:
-            assertionFailure("Unhandled case encountered")
+            assertionFailure("¡Unhandled case encountered: make CommunityButtonStyle!")
             return .clear
         }
     }
@@ -56,17 +58,8 @@ public struct CommunityButtonStyle: ButtonStyle {
         case .success: return theme.palette.bgSuccess
         case .danger: return theme.palette.bgDanger
         @unknown default:
-            assertionFailure("Unhandled case encountered")
+            assertionFailure("¡Unhandled case encountered: make CommunityButtonStyle!")
             return .clear
         }
-    }
-}
-
-extension ButtonStyle where Self == CommunityButtonStyle {
-    
-    public static var paletteButtonStyle: CommunityButtonStyle { CommunityButtonStyle() }
-    
-    public static func paletteButtonStyle(theme: ThemeManager = Theme.defaultValue , role: ButtonRole = .primary, settings: ButtonSettings = .default) -> CommunityButtonStyle {
-        return .init(theme: theme, role: role, settings: settings)
     }
 }

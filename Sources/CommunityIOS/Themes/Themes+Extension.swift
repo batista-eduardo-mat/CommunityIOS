@@ -11,8 +11,15 @@ extension Theme {
     public static var defaultValue: ThemeManager {
         ThemeManager(
             palette: Theme.Palette.defaultValue,
-            fonts: Theme.Font.defaultValue
-        )
+            font: Theme.Font.defaultValue)
+    }
+}
+
+extension Theme {
+    public static var community: ThemeManager {
+        ThemeManager(
+            palette: Theme.Palette.darkText,
+            font: Theme.Font.bitcountGridDouble)
     }
 }
 
@@ -20,8 +27,7 @@ extension Theme {
     public static var clear: ThemeManager {
         ThemeManager(
             palette: Theme.Palette.clear,
-            fonts: Theme.Font.defaultValue
-        )
+            font: Theme.Font.defaultValue)
     }
 }
 
@@ -29,7 +35,6 @@ extension Theme {
     public static var light: ThemeManager {
         ThemeManager(
             palette: Theme.Palette.light,
-            fonts: Theme.Font.defaultValue
-        )
+                     font: Theme.Font.defaultValue)
     }
 }
