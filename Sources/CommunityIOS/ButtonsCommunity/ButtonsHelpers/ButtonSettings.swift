@@ -9,10 +9,10 @@ import SwiftUI
 
 public struct ButtonSettings : Sendable {
 
-    let cornerRadius: CGFloat
-    let lineWidth: CGFloat
-    let minWidth: CGFloat
-    let minHeight: CGFloat
+    public let cornerRadius: CGFloat
+    public let lineWidth: CGFloat
+    public let minWidth: CGFloat
+    public let minHeight: CGFloat
     
     public init(cornerRadius: CGFloat = 0.0, lineWidth: CGFloat = 0.0, minWidth: CGFloat = 50, minHeight: CGFloat = 150) {
         self.cornerRadius = cornerRadius
