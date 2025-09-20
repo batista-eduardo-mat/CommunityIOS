@@ -24,13 +24,13 @@ public struct CommunityButtonStyle: ButtonStyle {
             .frame(minWidth: settings.minWidth, minHeight: settings.minHeight)
 //            .font(theme.font.font(.regular, size: 14))
             .padding()
-            .foregroundColor(Color(textColor))
+            .foregroundColor(Color(self.textColor))
             .background(
                 RoundedRectangle(cornerRadius: settings.cornerRadius)
-                    .strokeBorder(Color(bgColor), lineWidth: settings.lineWidth)
+                    .strokeBorder(Color(self.bgColor), lineWidth: settings.lineWidth)
                     .background(
                         RoundedRectangle(cornerRadius: settings.cornerRadius)
-                            .fill(Color(bgColor))
+                            .fill(Color(self.bgColor))
                     )
             )
             .opacity(configuration.isPressed ? 0.7 : 1)
