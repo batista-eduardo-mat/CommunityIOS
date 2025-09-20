@@ -9,48 +9,48 @@ import SwiftUI
 
 public struct PaletteStruct: Sendable {
     //MARK: TEXT UICOLOR
-    var textPrimary: UIColor
-    var textSecondary: UIColor
-    var textSuccess: UIColor
-    var textDanger: UIColor
-    var textWarning: UIColor
-    var textInfo: UIColor
-    var textLight: UIColor
-    var textDark: UIColor
-    var textBody: UIColor
-    var textMuted: UIColor
-    var textWhite: UIColor
-    var textBlack50: UIColor
-    var textWhite50: UIColor
+    public var textPrimary: UIColor
+    public var textSecondary: UIColor
+    public var textSuccess: UIColor
+    public var textDanger: UIColor
+    public var textWarning: UIColor
+    public var textInfo: UIColor
+    public var textLight: UIColor
+    public var textDark: UIColor
+    public var textBody: UIColor
+    public var textMuted: UIColor
+    public var textWhite: UIColor
+    public var textBlack50: UIColor
+    public var textWhite50: UIColor
     //MARK: LINK UICOLOR
-    var primaryLink: UIColor
-    var secondaryLink: UIColor
-    var successLink: UIColor
-    var dangerLink: UIColor
-    var warningLink: UIColor
-    var infoLink: UIColor
-    var lightLink: UIColor
-    var darkLink: UIColor
-    var mutedLink: UIColor
-    var whiteLink: UIColor
+    public var primaryLink: UIColor
+    public var secondaryLink: UIColor
+    public var successLink: UIColor
+    public var dangerLink: UIColor
+    public var warningLink: UIColor
+    public var infoLink: UIColor
+    public var lightLink: UIColor
+    public var darkLink: UIColor
+    public var mutedLink: UIColor
+    public var whiteLink: UIColor
     //MARK: BACKGROUND UICOLOR
-    var bgPrimary: UIColor
-    var bgSecondary: UIColor
-    var bgSuccess: UIColor
-    var bgDanger: UIColor
-    var bgWarning: UIColor
-    var bgInfo: UIColor
-    var bgLight: UIColor
-    var bgDark: UIColor
-    var bgWhite: UIColor
-    var bgTransparent: UIColor
+    public var bgPrimary: UIColor
+    public var bgSecondary: UIColor
+    public var bgSuccess: UIColor
+    public var bgDanger: UIColor
+    public var bgWarning: UIColor
+    public var bgInfo: UIColor
+    public var bgLight: UIColor
+    public var bgDark: UIColor
+    public var bgWhite: UIColor
+    public var bgTransparent: UIColor
     //MARK: BACKGROUND GRADIENT UICOLOR
-    var bgGradientPrimary: UIColor
-    var bgGradientSecondary: UIColor
-    var bgGradientSuccess: UIColor
-    var bgGradientDanger: UIColor
-    var bgGradientWarning: UIColor
-    var bgGradientInfo: UIColor
-    var bgGradientLight: UIColor
-    var bgGradientDark: UIColor
+    public var bgGradientPrimary: UIColor
+    public var bgGradientSecondary: UIColor
+    public var bgGradientSuccess: UIColor
+    public var bgGradientDanger: UIColor
+    public var bgGradientWarning: UIColor
+    public var bgGradientInfo: UIColor
+    public var bgGradientLight: UIColor
+    public var bgGradientDark: UIColor
 }
