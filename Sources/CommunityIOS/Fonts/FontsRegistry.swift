@@ -19,7 +19,9 @@ public enum FontsRegistry {
             let ok = CTFontManagerRegisterFontsForURL(url as CFURL, .process, &err)
             okAll = okAll && ok
             #if DEBUG
-            if !ok { print("⚠️ Font register failed:", url.lastPathComponent, err?.takeRetainedValue() as Any) }
+            if !ok {
+//                print("⚠️ Font register failed:", url.lastPathComponent, err?.takeRetainedValue() as Any)
+            }
             #endif
         }
         return okAll
