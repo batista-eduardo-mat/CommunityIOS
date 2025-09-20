@@ -1,5 +1,5 @@
 //
-//  File.swift
+//  registerAllFonts.swift
 //  CommunityIOS
 //
 //  Created by Eduardo Batista on 19/09/25.
