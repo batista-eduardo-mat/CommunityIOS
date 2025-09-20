@@ -22,7 +22,7 @@ public struct CommunityButtonStyle: ButtonStyle {
     public func makeBody(configuration: Configuration) -> some View {
         configuration.label
             .frame(minWidth: settings.minWidth, minHeight: settings.minHeight)
-            .font(theme.font.font(.regular, size: 14))
+//            .font(theme.font.font(.regular, size: 14))
             .padding()
             .foregroundColor(Color(textColor))
             .background(

@@ -9,11 +9,14 @@ import SwiftUI
 
 struct TestFont: View {
     init() {
-        Theme.Font.registerBitcountGridDouble()
+        Theme.Font.registerAllFonts()
     }
     var body: some View {
         Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-            .font(Theme.Font.bitcountGridDouble.font(.bold, size: 50))
+            .font(Theme.Font.bitcountGridDouble.font(.black, size: 24))
+        Text("Hello, Font!")
+            .font(Theme.Font.roboto.font(.medium, size: 24))
+        
     }
 }
 

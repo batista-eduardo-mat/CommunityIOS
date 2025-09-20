@@ -7,50 +7,57 @@
 
 
 public struct FontBuilder {
-    private var thin = ""
-    private var extraLight = ""
-    private var light = ""
-    private var regular = ""
-    private var medium = ""
-    private var semiBold = ""
-    private var bold = ""
-    private var extraBold = ""
-    private var black = ""
-    private var italic = ""
+    
+    private var names: [FontRole: String] = [:]
 
     public init() {}
 
-    @discardableResult public func setThin(_ thin: String) -> FontBuilder {
-        var c = self; c.thin = thin; return c
+    @discardableResult
+    public func set(_ role: FontRole, _ postScriptName: String) -> FontBuilder {
+        var c = self; c.names[role] = postScriptName; return c
     }
-    @discardableResult public func setExtraLight(_ extraLight: String) -> FontBuilder {
-        var c = self; c.extraLight = extraLight; return c
+
+   
+    @discardableResult public func setThin(_ n: String) -> Self {
+        set(.thin, n)
     }
-    @discardableResult public func setLight(_ light: String) -> FontBuilder {
-        var c = self; c.light = light; return c
+    
+    @discardableResult public func setExtraLight(_ n: String) -> Self {
+        set(.extraLight, n)
     }
-    @discardableResult public func setRegular(_ regular: String) -> FontBuilder {
-        var c = self; c.regular = regular; return c
+    
+    @discardableResult public func setLight(_ n: String) -> Self {
+        set(.light, n)
     }
-    @discardableResult public func setMedium(_ medium: String) -> FontBuilder {
-        var c = self; c.medium = medium; return c
+    
+    @discardableResult public func setRegular(_ n: String) -> Self {
+        set(.regular, n)
     }
-    @discardableResult public func setSemiBold(_ semiBold: String) -> FontBuilder {
-        var c = self; c.semiBold = semiBold; return c
+    
+    @discardableResult public func setMedium(_ n: String) -> Self {
+        set(.medium, n)
     }
-    @discardableResult public func setBold(_ bold: String) -> FontBuilder {
-        var c = self; c.bold = bold; return c
+    
+    @discardableResult public func setSemiBold(_ n: String) -> Self {
+        set(.semiBold, n)
     }
-    @discardableResult public func setExtraBold(_ extraBold: String) -> FontBuilder {
-        var c = self; c.extraBold = extraBold; return c
+    
+    @discardableResult public func setBold(_ n: String) -> Self {
+        set(.bold, n)
     }
-    @discardableResult public func setBlack(_ black: String) -> FontBuilder {
-        var c = self; c.black = black; return c
+    
+    @discardableResult public func setExtraBold(_ n: String) -> Self {
+        set(.extraBold, n)
     }
-    @discardableResult public func setItalic(_ italic: String) -> FontBuilder {
-        var c = self; c.italic = italic; return c
+    
+    @discardableResult public func setBlack(_ n: String) -> Self {
+        set(.black, n)
     }
-    public func build() -> FontStruct {
-        FontStruct(thin: thin, extraLight: extraLight, light: light, regular: regular, medium: medium, semiBold: semiBold, bold: bold, extraBold: extraBold, black: black, italic: italic)
+    
+    @discardableResult public func setItalic(_ n: String) -> Self {
+        set(.italic, n)
     }
+    
+    public func build() -> FontStruct { FontStruct(names: names) }
 }
+

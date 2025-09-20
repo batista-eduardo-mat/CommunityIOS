@@ -10,7 +10,7 @@ import SwiftUI
 private struct TestCommunityView: View {
     
     init() {
-        Theme.Font.registerBitcountGridDouble()
+//        Theme.Font.registerBitcountGridDouble()
     }
     var body: some View {
         
