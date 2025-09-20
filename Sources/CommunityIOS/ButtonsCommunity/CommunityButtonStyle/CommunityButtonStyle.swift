@@ -10,10 +10,10 @@ import SwiftUI
 
 public struct CommunityButtonStyle: ButtonStyle {
     let theme: ThemeManager
-    let role: ButtonRole
+    let role: ButtonType
     let settings: ButtonSettings
 
-    public init(theme: ThemeManager = Theme.community , role: ButtonRole = .primary, settings: ButtonSettings = .community) {
+    public init(theme: ThemeManager = Theme.community , role: ButtonType = .primary, settings: ButtonSettings = .community) {
         self.theme = theme
         self.role = role
         self.settings = settings
